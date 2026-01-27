@@ -196,7 +196,7 @@ export default function Pricing() {
               </Link>
 
               <div className="border-t border-neutral-200 pt-6">
-                <h4 className="font-semibold text-neutral-900 mb-4">What's included:</h4>
+                <h4 className="font-semibold text-neutral-900 mb-4">What&apos;s included:</h4>
                 <ul className="space-y-3">
                   {plan.features.map((feature, idx) => (
                     <li key={idx} className="flex items-start gap-3">

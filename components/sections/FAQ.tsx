@@ -80,7 +80,7 @@ export default function FAQ() {
             Common Questions Answered
           </h2>
           <p className="text-lg text-neutral-600">
-            Can't find what you're looking for? Contact our support team.
+            Can&apos;t find what you&apos;re looking for? Contact our support team.
           </p>
         </motion.div>
 

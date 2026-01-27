@@ -21,7 +21,7 @@ export default function FinalCTA() {
             Ready to Build Your Dream Website?
           </h2>
           <p className="text-xl sm:text-2xl text-white/90 mb-12 max-w-2xl mx-auto">
-            Join 10,000+ users who've already transformed their online presence with AI
+            Join 10,000+ users who&apos;ve already transformed their online presence with AI
           </p>
 
           {/* CTA Buttons */}
