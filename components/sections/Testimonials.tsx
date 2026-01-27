@@ -147,7 +147,7 @@ export default function Testimonials() {
             >
               <Quote className="absolute top-6 left-6 w-12 h-12 text-white/30" />
               <blockquote className="text-xl md:text-2xl italic text-white leading-relaxed mb-8 relative z-10">
-                "{testimonials[currentIndex].quote}"
+                &quot;{testimonials[currentIndex].quote}&quot;
               </blockquote>
               <div className="flex items-center gap-4 mb-6">
                 <img
