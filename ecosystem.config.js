@@ -3,7 +3,7 @@ module.exports = {
     name: 'websevix',
     script: 'npm',
     args: 'start',
-    cwd: '/var/www/websevix',
+    cwd: '/var/www/websevix/websevix',
     instances: 1,
     autorestart: true,
     watch: false,
