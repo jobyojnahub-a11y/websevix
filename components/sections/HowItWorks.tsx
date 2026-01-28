@@ -2,44 +2,45 @@
 
 import { MessageSquare, Sparkles, Rocket, Check } from 'lucide-react'
 import { motion } from 'framer-motion'
+import Link from 'next/link'
 
 const steps = [
   {
     number: '01',
-    title: 'Share Your Requirements',
-    description: 'Login to your dashboard and start a conversation with our AI assistant. Describe your business, target audience, and website goals. Our AI will ask intelligent questions to understand your needs perfectly.',
+    title: 'Contact Us & Share Requirements',
+    description: 'Fill out our contact form with your business details, website requirements, and design preferences. Our team will review your needs and get in touch within 24 hours to discuss your project.',
     features: [
-      'Conversational AI that understands context',
-      'Asks clarifying questions automatically',
-      'Saves progress - continue anytime',
-      'Supports uploading reference images',
-      'Multi-language support',
+      'Simple contact form',
+      'Share business type and goals',
+      'Upload reference designs (optional)',
+      'Describe target audience',
+      'Specify features and functionality',
     ],
     icon: MessageSquare,
   },
   {
     number: '02',
-    title: 'Review AI-Generated Designs',
-    description: 'Based on your requirements, our AI creates 3-5 unique website designs in real-time. Each design is complete with pages, content, images, and functionality. Preview them all and select your favorite.',
+    title: 'We Build Your Website with AI',
+    description: 'Our expert team uses advanced AI tools to create a professional, custom website tailored to your business. We handle design, content, functionality, and optimization - all powered by AI for the best results.',
     features: [
-      '3-5 unique designs per session',
-      'Complete with sample content',
-      'Mobile and desktop previews',
-      'Regenerate unlimited times',
-      'Compare designs side-by-side',
+      'AI-powered design generation',
+      'Custom content creation',
+      'Mobile-responsive layouts',
+      'SEO optimization',
+      'Professional quality guaranteed',
     ],
     icon: Sparkles,
   },
   {
     number: '03',
-    title: 'Perfect It & Go Live',
-    description: 'Use our intuitive visual editor to customize your chosen design. Edit text, swap images, change colors, add pages, or modify layouts. See changes instantly. When ready, launch your website with one click.',
+    title: 'Review & Launch',
+    description: 'We deliver your website within a few business days. Review the design, request revisions if needed, and once approved, we launch it live with hosting, SSL, and domain setup included.',
     features: [
-      'Real-time visual editor',
-      'No code required - all visual',
-      'Unlimited revisions before launch',
-      'Choose custom domain or subdomain',
-      'Automatic SSL and hosting included',
+      'Fast delivery (few business days)',
+      'Unlimited revisions included',
+      'Custom domain setup',
+      'SSL certificate included',
+      'Complete hosting solution',
     ],
     icon: Rocket,
   },
@@ -47,7 +48,7 @@ const steps = [
 
 export default function HowItWorks() {
   return (
-    <section className="section-padding bg-gradient-to-b from-neutral-50 to-white">
+    <section id="how-it-works" className="section-padding bg-dark-bg-secondary">
       <div className="container-custom">
         {/* Section Header */}
         <motion.div
@@ -57,14 +58,14 @@ export default function HowItWorks() {
           transition={{ duration: 0.6 }}
           className="text-center max-w-3xl mx-auto mb-16"
         >
-          <span className="inline-block text-sm uppercase tracking-widest text-primary-600 font-semibold mb-4">
-            Simple Process
+          <span className="inline-block text-sm uppercase tracking-widest text-secondary-400 font-semibold mb-4">
+            How It Works
           </span>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-bold text-neutral-900 mb-4">
-            Create Your Website in Three Easy Steps
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-bold text-white mb-4">
+            From Contact to Launch in Simple Steps
           </h2>
-          <p className="text-lg sm:text-xl text-neutral-600">
-            From idea to live website in under 15 minutes
+          <p className="text-lg sm:text-xl text-dark-text-secondary">
+            Professional websites delivered in just a few business days
           </p>
         </motion.div>
 
@@ -94,18 +95,18 @@ export default function HowItWorks() {
                 </div>
 
                 {/* Step Content */}
-                <div className="flex-1 bg-white rounded-2xl p-8 shadow-md -mt-10 lg:mt-0">
-                  <h3 className="text-2xl sm:text-3xl font-display font-semibold text-neutral-900 mb-4">
+                <div className="flex-1 bg-dark-bg-tertiary rounded-2xl p-8 shadow-md -mt-10 lg:mt-0 border border-dark-border">
+                  <h3 className="text-2xl sm:text-3xl font-display font-semibold text-white mb-4">
                     {step.title}
                   </h3>
-                  <p className="text-lg text-neutral-600 mb-6 leading-relaxed">
+                  <p className="text-lg text-dark-text-secondary mb-6 leading-relaxed">
                     {step.description}
                   </p>
                   <ul className="space-y-3">
                     {step.features.map((feature) => (
                       <li key={feature} className="flex items-start gap-3">
-                        <Check className="w-5 h-5 text-success-600 flex-shrink-0 mt-0.5" />
-                        <span className="text-neutral-700">{feature}</span>
+                        <Check className="w-5 h-5 text-success-400 flex-shrink-0 mt-0.5" />
+                        <span className="text-dark-text-primary">{feature}</span>
                       </li>
                     ))}
                   </ul>
@@ -123,11 +124,14 @@ export default function HowItWorks() {
           transition={{ duration: 0.6, delay: 0.6 }}
           className="text-center mt-16"
         >
-          <button className="px-8 py-4 bg-gradient-to-r from-primary-600 to-secondary-600 text-white font-semibold text-lg rounded-xl shadow-primary hover:shadow-2xl hover:scale-105 transition-all duration-300">
-            Start Building Now
-          </button>
-          <p className="text-sm text-neutral-600 mt-4">
-            No credit card required • Free 14-day trial
+          <Link
+            href="#contact"
+            className="inline-block px-8 py-4 bg-gradient-to-r from-primary-500 to-secondary-500 text-white font-semibold text-lg rounded-xl shadow-lg hover:shadow-secondary hover:scale-105 transition-all duration-300"
+          >
+            Get Started Today
+          </Link>
+          <p className="text-sm text-dark-text-secondary mt-4">
+            Contact us now • Response within 24 hours
           </p>
         </motion.div>
       </div>

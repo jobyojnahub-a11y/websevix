@@ -4,17 +4,17 @@
 
 @layer base {
   :root {
-    --font-display: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-    --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    --font-display: 'Space Grotesk', -apple-system, sans-serif;
+    --font-body: 'Poppins', -apple-system, sans-serif;
     --font-mono: 'JetBrains Mono', 'Fira Code', Consolas, monospace;
   }
 
   * {
-    @apply border-neutral-200;
+    @apply border-dark-border;
   }
 
   body {
-    @apply bg-neutral-50 text-neutral-900 font-body;
+    @apply bg-dark-bg-primary text-dark-text-primary font-body;
     font-feature-settings: 'rlig' 1, 'calt' 1;
   }
 
@@ -25,11 +25,11 @@
 
 @layer utilities {
   .gradient-text {
-    @apply bg-gradient-to-r from-primary-600 to-secondary-600 bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-primary-400 to-secondary-400 bg-clip-text text-transparent;
   }
 
   .glassmorphism {
-    @apply backdrop-blur-md bg-white/80 dark:bg-dark-bg-primary/80;
+    @apply backdrop-blur-md bg-dark-bg-primary/80 border border-dark-border;
   }
 
   .section-padding {
@@ -38,6 +38,15 @@
 
   .container-custom {
     @apply max-w-7xl mx-auto;
+  }
+}
+
+@keyframes gradient {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
   }
 }
 
@@ -52,13 +61,13 @@ html {
 }
 
 ::-webkit-scrollbar-track {
-  @apply bg-neutral-100;
+  @apply bg-dark-bg-secondary;
 }
 
 ::-webkit-scrollbar-thumb {
-  @apply bg-neutral-400 rounded-full;
+  @apply bg-dark-border rounded-full;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  @apply bg-neutral-500;
+  @apply bg-dark-surface;
 }

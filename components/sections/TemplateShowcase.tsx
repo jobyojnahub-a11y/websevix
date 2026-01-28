@@ -125,8 +125,8 @@ export default function TemplateShowcase() {
               onClick={() => setActiveCategory(category)}
               className={`px-6 py-2 rounded-lg font-medium transition-all duration-200 ${
                 activeCategory === category
-                  ? 'bg-gradient-to-r from-primary-600 to-secondary-600 text-white shadow-lg'
-                  : 'bg-white/10 text-white/60 hover:bg-white/20 hover:text-white/80'
+                  ? 'bg-gradient-to-r from-primary-500 to-secondary-500 text-white shadow-lg'
+                  : 'bg-dark-bg-secondary text-dark-text-secondary hover:bg-dark-bg-tertiary hover:text-white border border-dark-border'
               }`}
             >
               {category}

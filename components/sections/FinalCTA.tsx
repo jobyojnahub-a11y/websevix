@@ -6,9 +6,9 @@ import Link from 'next/link'
 
 export default function FinalCTA() {
   return (
-    <section className="section-padding bg-gradient-to-br from-accent-600 to-accent-700 relative overflow-hidden">
+    <section className="section-padding bg-gradient-to-br from-primary-800 via-primary-900 to-secondary-900 relative overflow-hidden">
       {/* Animated Background */}
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,_rgba(255,255,255,0.1)_0%,_transparent_50%),radial-gradient(ellipse_at_bottom_right,_rgba(255,255,255,0.1)_0%,_transparent_50%)] animate-mesh-move" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,_rgba(0,217,255,0.1)_0%,_transparent_50%),radial-gradient(ellipse_at_bottom_right,_rgba(30,97,215,0.1)_0%,_transparent_50%)] animate-mesh-move" />
 
       <div className="container-custom relative z-10 text-center">
         <motion.div
@@ -21,37 +21,40 @@ export default function FinalCTA() {
             Ready to Build Your Dream Website?
           </h2>
           <p className="text-xl sm:text-2xl text-white/90 mb-12 max-w-2xl mx-auto">
-            Join 10,000+ users who&apos;ve already transformed their online presence with AI
+            Join 10,000+ businesses who&apos;ve transformed their online presence with our AI-powered websites
           </p>
 
           {/* CTA Buttons */}
           <div className="flex flex-wrap justify-center gap-4 mb-8">
             <Link
-              href="#signup"
-              className="group px-10 py-5 bg-white text-accent-700 font-bold text-xl rounded-xl shadow-2xl hover:scale-105 transition-all duration-300 flex items-center gap-2"
+              href="#contact"
+              className="group px-10 py-5 bg-white text-primary-700 font-bold text-xl rounded-xl shadow-2xl hover:scale-105 transition-all duration-300 flex items-center gap-2"
             >
-              Start Building Free
+              Get Started Now
               <Rocket className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
             </Link>
-            <button className="px-10 py-5 border-2 border-white text-white font-bold text-xl rounded-xl hover:bg-white hover:text-accent-700 transition-all duration-300 flex items-center gap-2">
+            <Link
+              href="#how-it-works"
+              className="px-10 py-5 border-2 border-white text-white font-bold text-xl rounded-xl hover:bg-white/10 transition-all duration-300 flex items-center gap-2"
+            >
               <Calendar className="w-6 h-6" />
-              Schedule a Demo
-            </button>
+              Learn More
+            </Link>
           </div>
 
           {/* Trust Line */}
           <div className="flex flex-wrap justify-center items-center gap-6 mb-8">
             <div className="flex items-center gap-2 text-white/80">
               <Check className="w-5 h-5 text-success-400" />
-              <span>No credit card required</span>
+              <span>Professional quality</span>
             </div>
             <div className="flex items-center gap-2 text-white/80">
               <Check className="w-5 h-5 text-success-400" />
-              <span>14-day free trial</span>
+              <span>Fast delivery</span>
             </div>
             <div className="flex items-center gap-2 text-white/80">
               <Check className="w-5 h-5 text-success-400" />
-              <span>Cancel anytime</span>
+              <span>Satisfaction guaranteed</span>
             </div>
           </div>
 
@@ -66,7 +69,7 @@ export default function FinalCTA() {
                 />
               ))}
             </div>
-            <span className="text-white/80 font-medium">Join 10,000+ happy users</span>
+            <span className="text-white/80 font-medium">Join 10,000+ happy clients</span>
           </div>
         </motion.div>
       </div>

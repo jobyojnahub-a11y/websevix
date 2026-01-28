@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import { ChevronDown } from 'lucide-react'
 import { motion, AnimatePresence } from 'framer-motion'
+import Link from 'next/link'
 
 const faqs = [
   {
@@ -63,7 +64,7 @@ export default function FAQ() {
   }
 
   return (
-    <section id="faq" className="section-padding bg-white">
+    <section id="faq" className="section-padding bg-dark-bg-primary">
       <div className="container-custom max-w-4xl">
         {/* Section Header */}
         <motion.div
@@ -73,13 +74,13 @@ export default function FAQ() {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <span className="inline-block text-sm uppercase tracking-widest text-primary-600 font-semibold mb-4">
+          <span className="inline-block text-sm uppercase tracking-widest text-secondary-400 font-semibold mb-4">
             FAQs
           </span>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-bold text-neutral-900 mb-4">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-bold text-white mb-4">
             Common Questions Answered
           </h2>
-          <p className="text-lg text-neutral-600">
+          <p className="text-lg text-dark-text-secondary">
             Can&apos;t find what you&apos;re looking for? Contact our support team.
           </p>
         </motion.div>
@@ -93,17 +94,17 @@ export default function FAQ() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: index * 0.05 }}
-              className="border-b border-neutral-200"
+              className="border-b border-dark-border"
             >
               <button
                 onClick={() => toggleFAQ(index)}
                 className="w-full py-6 flex items-center justify-between text-left group"
               >
-                <span className="text-lg font-semibold text-neutral-900 group-hover:text-primary-600 transition-colors pr-8">
+                <span className="text-lg font-semibold text-white group-hover:text-secondary-400 transition-colors pr-8">
                   {faq.question}
                 </span>
                 <ChevronDown
-                  className={`w-5 h-5 text-neutral-600 flex-shrink-0 transition-transform duration-300 ${
+                  className={`w-5 h-5 text-dark-text-secondary flex-shrink-0 transition-transform duration-300 ${
                     openIndex === index ? 'rotate-180' : ''
                   }`}
                 />
@@ -117,7 +118,7 @@ export default function FAQ() {
                     transition={{ duration: 0.3 }}
                     className="overflow-hidden"
                   >
-                    <p className="pb-6 text-neutral-600 leading-relaxed">{faq.answer}</p>
+                    <p className="pb-6 text-dark-text-secondary leading-relaxed">{faq.answer}</p>
                   </motion.div>
                 )}
               </AnimatePresence>
@@ -133,14 +134,17 @@ export default function FAQ() {
           transition={{ duration: 0.6 }}
           className="text-center mt-12"
         >
-          <p className="text-lg text-neutral-700 mb-4">Still have questions?</p>
+          <p className="text-lg text-white mb-4">Still have questions?</p>
           <div className="flex flex-wrap justify-center gap-4">
-            <button className="px-6 py-3 bg-primary-600 text-white rounded-lg font-semibold hover:bg-primary-700 transition-colors">
-              Chat with our team
-            </button>
+            <Link
+              href="#contact"
+              className="px-6 py-3 bg-primary-500 text-white rounded-lg font-semibold hover:bg-primary-600 transition-colors"
+            >
+              Contact Us
+            </Link>
             <a
               href="mailto:support@websevix.com"
-              className="px-6 py-3 border-2 border-neutral-300 text-neutral-700 rounded-lg font-semibold hover:border-primary-600 hover:text-primary-600 transition-colors"
+              className="px-6 py-3 border-2 border-dark-border text-dark-text-primary rounded-lg font-semibold hover:border-primary-500 hover:text-primary-400 transition-colors"
             >
               Email us at support@websevix.com
             </a>

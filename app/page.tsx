@@ -7,12 +7,13 @@ import TemplateShowcase from '@/components/sections/TemplateShowcase'
 import Pricing from '@/components/sections/Pricing'
 import Testimonials from '@/components/sections/Testimonials'
 import FAQ from '@/components/sections/FAQ'
+import ContactForm from '@/components/sections/ContactForm'
 import FinalCTA from '@/components/sections/FinalCTA'
 import Footer from '@/components/Footer'
 
 export default function Home() {
   return (
-    <main className="min-h-screen">
+    <main className="min-h-screen bg-dark-bg-primary">
       <Navigation />
       <Hero />
       <TrustBar />
@@ -22,6 +23,7 @@ export default function Home() {
       <Pricing />
       <Testimonials />
       <FAQ />
+      <ContactForm />
       <FinalCTA />
       <Footer />
     </main>

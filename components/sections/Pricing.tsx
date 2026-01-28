@@ -8,73 +8,71 @@ import Link from 'next/link'
 const plans = [
   {
     name: 'Starter',
-    badge: 'Best for Beginners',
-    description: 'Perfect for personal projects and small websites',
-    monthlyPrice: 19,
-    annualPrice: 15,
+    badge: 'Best for Small Business',
+    description: 'Perfect for personal projects and small businesses',
+    monthlyPrice: 199,
+    annualPrice: 179,
     features: [
-      { text: '5 AI-generated websites', included: true },
-      { text: '10 GB storage', included: true },
-      { text: 'Custom subdomain (yoursite.websevix.com)', included: true },
+      { text: '1 Custom AI-powered website', included: true },
+      { text: 'Mobile responsive design', included: true },
+      { text: 'Custom domain setup', included: true },
       { text: 'SSL certificate included', included: true },
-      { text: 'Mobile responsive designs', included: true },
-      { text: 'Basic templates access', included: true },
-      { text: 'Email support (24h response)', included: true },
-      { text: '50 GB bandwidth/month', included: true },
-      { text: 'Custom domain', included: false },
-      { text: 'Advanced AI features', included: false },
+      { text: 'Basic SEO optimization', included: true },
+      { text: '2 rounds of revisions', included: true },
+      { text: 'Email support', included: true },
+      { text: 'Delivery in 3-5 business days', included: true },
       { text: 'E-commerce functionality', included: false },
+      { text: 'Advanced features', included: false },
+      { text: 'Priority support', included: false },
     ],
   },
   {
     name: 'Professional',
     badge: 'Most Popular',
     description: 'For growing businesses and agencies',
-    monthlyPrice: 49,
-    annualPrice: 39,
+    monthlyPrice: 499,
+    annualPrice: 449,
     featured: true,
     features: [
-      { text: '25 AI-generated websites', included: true },
-      { text: '50 GB storage', included: true },
-      { text: 'Custom domain included (1 year free)', included: true },
+      { text: '1 Custom AI-powered website', included: true },
+      { text: 'Advanced design & branding', included: true },
+      { text: 'Custom domain setup', included: true },
       { text: 'SSL certificate included', included: true },
-      { text: 'Mobile responsive designs', included: true },
-      { text: 'All premium templates', included: true },
-      { text: 'Priority support (4h response)', included: true },
-      { text: '500 GB bandwidth/month', included: true },
-      { text: 'Advanced AI features (image generation, content writing)', included: true },
-      { text: 'SEO optimization tools', included: true },
-      { text: 'Analytics dashboard', included: true },
-      { text: 'Custom code injection', included: true },
-      { text: 'Remove Websevix branding', included: true },
-      { text: 'White-label solution', included: false },
-      { text: 'Dedicated account manager', included: false },
+      { text: 'Full SEO optimization', included: true },
+      { text: 'Unlimited revisions', included: true },
+      { text: 'Priority support (24h response)', included: true },
+      { text: 'Delivery in 2-3 business days', included: true },
+      { text: 'E-commerce functionality', included: true },
+      { text: 'Advanced AI features', included: true },
+      { text: 'Analytics setup', included: true },
+      { text: 'Content management system', included: true },
+      { text: 'Social media integration', included: true },
+      { text: 'Dedicated project manager', included: false },
     ],
   },
   {
     name: 'Enterprise',
-    badge: 'For Teams',
-    description: 'Unlimited possibilities for large organizations',
+    badge: 'For Large Organizations',
+    description: 'Custom solutions for enterprise needs',
     monthlyPrice: null,
     annualPrice: null,
     customPricing: true,
     features: [
-      { text: 'Unlimited AI-generated websites', included: true },
-      { text: '500 GB storage (expandable)', included: true },
-      { text: 'Unlimited custom domains', included: true },
+      { text: 'Multiple custom websites', included: true },
+      { text: 'Enterprise-grade design', included: true },
+      { text: 'Multiple custom domains', included: true },
       { text: 'SSL certificates for all domains', included: true },
-      { text: 'Mobile responsive designs', included: true },
-      { text: 'All premium templates + custom designs', included: true },
+      { text: 'Advanced SEO & marketing', included: true },
+      { text: 'Unlimited revisions', included: true },
       { text: '24/7 dedicated support', included: true },
-      { text: 'Unlimited bandwidth', included: true },
-      { text: 'Advanced AI features with API access', included: true },
+      { text: 'Fast-track delivery (1-2 days)', included: true },
+      { text: 'E-commerce & payment integration', included: true },
+      { text: 'Custom AI features', included: true },
       { text: 'White-label solution', included: true },
-      { text: 'Custom branding', included: true },
       { text: 'Dedicated account manager', included: true },
-      { text: 'Team collaboration tools (up to 50 users)', included: true },
+      { text: 'Team collaboration tools', included: true },
       { text: 'Priority feature requests', included: true },
       { text: 'SLA guarantee (99.99% uptime)', included: true },
-      { text: 'Advanced security features', included: true },
       { text: 'Custom integrations', included: true },
       { text: 'Training sessions included', included: true },
     ],
@@ -85,7 +83,7 @@ export default function Pricing() {
   const [billingCycle, setBillingCycle] = useState<'monthly' | 'annual'>('monthly')
 
   return (
-    <section id="pricing" className="section-padding bg-white">
+    <section id="pricing" className="section-padding bg-dark-bg-secondary">
       <div className="container-custom">
         {/* Section Header */}
         <motion.div
@@ -95,36 +93,36 @@ export default function Pricing() {
           transition={{ duration: 0.6 }}
           className="text-center max-w-3xl mx-auto mb-12"
         >
-          <span className="inline-block text-sm uppercase tracking-widest text-primary-600 font-semibold mb-4">
+          <span className="inline-block text-sm uppercase tracking-widest text-secondary-400 font-semibold mb-4">
             Transparent Pricing
           </span>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-bold text-neutral-900 mb-4">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-bold text-white mb-4">
             Choose the Plan That Fits Your Needs
           </h2>
-          <p className="text-lg text-neutral-600">
-            All plans include core features. Scale as you grow. No hidden fees.
+          <p className="text-lg text-dark-text-secondary">
+            Professional websites delivered in business days. All plans include hosting, SSL, and support.
           </p>
         </motion.div>
 
         {/* Billing Toggle */}
         <div className="flex items-center justify-center gap-4 mb-12">
-          <span className={`text-sm font-medium ${billingCycle === 'monthly' ? 'text-neutral-900' : 'text-neutral-500'}`}>
-            Monthly
+          <span className={`text-sm font-medium ${billingCycle === 'monthly' ? 'text-white' : 'text-dark-text-muted'}`}>
+            One-Time
           </span>
           <button
             onClick={() => setBillingCycle(billingCycle === 'monthly' ? 'annual' : 'monthly')}
-            className="relative w-14 h-8 bg-neutral-200 rounded-full transition-colors"
+            className="relative w-14 h-8 bg-dark-bg-tertiary rounded-full transition-colors border border-dark-border"
           >
             <div
-              className={`absolute top-1 left-1 w-6 h-6 bg-white rounded-full shadow-md transition-transform ${
+              className={`absolute top-1 left-1 w-6 h-6 bg-primary-500 rounded-full shadow-md transition-transform ${
                 billingCycle === 'annual' ? 'translate-x-6' : ''
               }`}
             />
           </button>
-          <span className={`text-sm font-medium ${billingCycle === 'annual' ? 'text-neutral-900' : 'text-neutral-500'}`}>
+          <span className={`text-sm font-medium ${billingCycle === 'annual' ? 'text-white' : 'text-dark-text-muted'}`}>
             Annual
-            <span className="ml-2 px-2 py-0.5 bg-success-100 text-success-600 rounded text-xs font-semibold">
-              Save 20%
+            <span className="ml-2 px-2 py-0.5 bg-success-500/20 text-success-400 rounded text-xs font-semibold border border-success-500/30">
+              Save 10%
             </span>
           </span>
         </div>
@@ -138,74 +136,74 @@ export default function Pricing() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
-              className={`relative bg-white border-2 rounded-2xl p-8 hover:shadow-xl hover:-translate-y-2 transition-all duration-300 ${
+              className={`relative bg-dark-bg-tertiary border-2 rounded-2xl p-8 hover:shadow-xl hover:-translate-y-2 transition-all duration-300 ${
                 plan.featured
-                  ? 'border-primary-600 shadow-primary scale-105 z-10'
-                  : 'border-neutral-200'
+                  ? 'border-primary-500 shadow-secondary scale-105 z-10'
+                  : 'border-dark-border'
               }`}
             >
               {plan.featured && (
-                <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 bg-gradient-to-r from-primary-600 to-secondary-600 text-white text-xs font-semibold rounded-full">
+                <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 bg-gradient-to-r from-primary-500 to-secondary-500 text-white text-xs font-semibold rounded-full">
                   {plan.badge}
                 </div>
               )}
 
               <div className="mb-6">
                 {!plan.featured && (
-                  <span className="inline-block px-3 py-1 bg-neutral-100 text-neutral-600 text-xs font-medium rounded-full mb-4">
+                  <span className="inline-block px-3 py-1 bg-dark-bg-secondary text-dark-text-secondary text-xs font-medium rounded-full mb-4 border border-dark-border">
                     {plan.badge}
                   </span>
                 )}
-                <h3 className="text-3xl font-display font-bold text-neutral-900 mb-2">{plan.name}</h3>
-                <p className="text-neutral-600">{plan.description}</p>
+                <h3 className="text-3xl font-display font-bold text-white mb-2">{plan.name}</h3>
+                <p className="text-dark-text-secondary">{plan.description}</p>
               </div>
 
               <div className="mb-6">
                 {plan.customPricing ? (
                   <div>
-                    <div className="text-4xl font-black text-neutral-900 mb-2">Custom Pricing</div>
-                    <div className="text-sm text-neutral-600">Starting at $199/month</div>
+                    <div className="text-4xl font-black text-white mb-2">Custom Pricing</div>
+                    <div className="text-sm text-dark-text-secondary">Contact us for a quote</div>
                   </div>
                 ) : (
                   <div className="flex items-baseline gap-1">
-                    <span className="text-2xl font-medium">$</span>
-                    <span className="text-5xl font-black text-neutral-900">
+                    <span className="text-2xl font-medium text-dark-text-secondary">$</span>
+                    <span className="text-5xl font-black text-white">
                       {billingCycle === 'monthly' ? plan.monthlyPrice : plan.annualPrice}
                     </span>
-                    <span className="text-lg text-neutral-600">/month</span>
+                    <span className="text-lg text-dark-text-secondary">one-time</span>
                   </div>
                 )}
                 {!plan.customPricing && billingCycle === 'annual' && (
-                  <div className="mt-2 inline-block px-3 py-1 bg-success-100 text-success-600 rounded text-xs font-semibold">
-                    ${plan.annualPrice}/month when billed annually
+                  <div className="mt-2 inline-block px-3 py-1 bg-success-500/20 text-success-400 rounded text-xs font-semibold border border-success-500/30">
+                    Save ${plan.monthlyPrice - plan.annualPrice} with annual payment
                   </div>
                 )}
               </div>
 
               <Link
-                href="#signup"
+                href="#contact"
                 className={`block w-full text-center py-3 rounded-lg font-semibold transition-all duration-300 mb-6 ${
                   plan.featured
-                    ? 'bg-gradient-to-r from-primary-600 to-secondary-600 text-white hover:shadow-lg hover:scale-105'
+                    ? 'bg-gradient-to-r from-primary-500 to-secondary-500 text-white hover:shadow-secondary hover:scale-105'
                     : plan.customPricing
-                    ? 'bg-accent-600 text-white hover:bg-accent-700'
-                    : 'bg-primary-600 text-white hover:bg-primary-700'
+                    ? 'bg-accent-500 text-white hover:bg-accent-600'
+                    : 'bg-primary-500 text-white hover:bg-primary-600'
                 }`}
               >
                 {plan.customPricing ? 'Contact Sales' : 'Get Started'}
               </Link>
 
-              <div className="border-t border-neutral-200 pt-6">
-                <h4 className="font-semibold text-neutral-900 mb-4">What&apos;s included:</h4>
+              <div className="border-t border-dark-border pt-6">
+                <h4 className="font-semibold text-white mb-4">What&apos;s included:</h4>
                 <ul className="space-y-3">
                   {plan.features.map((feature, idx) => (
                     <li key={idx} className="flex items-start gap-3">
                       {feature.included ? (
-                        <Check className="w-5 h-5 text-success-600 flex-shrink-0 mt-0.5" />
+                        <Check className="w-5 h-5 text-success-400 flex-shrink-0 mt-0.5" />
                       ) : (
-                        <X className="w-5 h-5 text-neutral-400 flex-shrink-0 mt-0.5" />
+                        <X className="w-5 h-5 text-dark-text-muted flex-shrink-0 mt-0.5" />
                       )}
-                      <span className={`text-sm ${feature.included ? 'text-neutral-700' : 'text-neutral-400'}`}>
+                      <span className={`text-sm ${feature.included ? 'text-dark-text-primary' : 'text-dark-text-muted'}`}>
                         {feature.text}
                       </span>
                     </li>
@@ -218,13 +216,13 @@ export default function Pricing() {
 
         {/* Footer */}
         <div className="text-center mt-12">
-          <p className="text-sm text-neutral-600 mb-2">
-            <Link href="#faq" className="text-primary-600 hover:underline">
+          <p className="text-sm text-dark-text-secondary mb-2">
+            <Link href="#faq" className="text-secondary-400 hover:text-secondary-300 hover:underline">
               Have questions? View our pricing FAQ
             </Link>
           </p>
-          <p className="text-sm text-neutral-500">
-            30-day money-back guarantee • All prices in USD. Local taxes may apply.
+          <p className="text-sm text-dark-text-muted">
+            Satisfaction guaranteed • All prices in USD. Local taxes may apply.
           </p>
         </div>
       </div>

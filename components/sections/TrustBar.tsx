@@ -17,9 +17,9 @@ export default function TrustBar() {
   ]
 
   return (
-    <section className="bg-neutral-50 py-10 border-y border-neutral-200">
+    <section className="bg-dark-bg-secondary py-10 border-y border-dark-border">
       <div className="container-custom px-4 sm:px-6 lg:px-8">
-        <p className="text-center text-sm uppercase tracking-widest text-neutral-500 mb-6 font-semibold">
+        <p className="text-center text-sm uppercase tracking-widest text-dark-text-muted mb-6 font-semibold">
           Trusted by Leading Brands and Featured In
         </p>
         <div className="overflow-hidden">

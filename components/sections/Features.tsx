@@ -6,39 +6,39 @@ import { motion } from 'framer-motion'
 const features = [
   {
     icon: Sparkles,
-    title: 'Intelligent AI Builder',
-    description: 'Our advanced AI understands your requirements through natural conversation and generates professional websites automatically. Simply describe what you need - business type, style preferences, features - and watch as our AI creates complete pages, layouts, and content tailored specifically for your business. No coding or design skills required.',
+    title: 'AI-Powered Website Creation',
+    description: 'Our expert team uses advanced AI tools to create professional, custom websites tailored to your business. We combine AI technology with human expertise to deliver websites that perfectly match your brand and requirements. No technical knowledge needed on your end.',
   },
   {
     icon: Zap,
-    title: 'Launch in Minutes, Not Weeks',
-    description: 'Traditional website development takes weeks or months. With Websevix, go from idea to live website in under 15 minutes. Our AI handles everything - design, content generation, responsive layouts, and deployment. Save thousands of dollars and countless hours while still getting a professional, custom website.',
+    title: 'Fast Delivery in Business Days',
+    description: 'Traditional website development takes weeks or months. With Websevix, get your professional website delivered in just a few business days. Our AI-powered workflow ensures quality and speed, saving you time and money while delivering exceptional results.',
   },
   {
     icon: Shield,
-    title: 'Built-In Security & Protection',
-    description: 'Every website comes with enterprise-level security features. Automatic SSL certificates, DDoS protection, regular security patches, encrypted data storage, and automatic backups ensure your website and data stay safe. Compliant with GDPR, SOC 2, and industry standards out of the box.',
+    title: 'Enterprise-Level Security',
+    description: 'Every website comes with enterprise-level security features. Automatic SSL certificates, DDoS protection, regular security patches, encrypted data storage, and automatic backups ensure your website and data stay safe. Compliant with GDPR, SOC 2, and industry standards.',
   },
   {
     icon: Palette,
-    title: 'Complete Design Control',
-    description: 'Start with AI-generated designs, then customize everything to match your brand. Change colors, fonts, layouts, add custom code, integrate third-party tools, and modify any element. Our visual editor provides real-time preview while you edit. Export clean code or use our hosting - complete flexibility.',
+    title: 'Custom Design & Branding',
+    description: 'We create unique designs that match your brand identity. Our team uses AI to generate design concepts, then customizes everything - colors, fonts, layouts, imagery - to perfectly represent your business. Complete design control with professional results.',
   },
   {
     icon: Headphones,
-    title: 'Always-Available Support Team',
-    description: 'Our dedicated support team is available 24/7 via chat, email, and phone. Get help with technical issues, design guidance, custom development, SEO optimization, and more. Average response time under 2 minutes for chat, with escalation to senior engineers for complex issues. Your success is our priority.',
+    title: 'Dedicated Support Team',
+    description: 'Our dedicated support team is available to help you throughout the process. Get assistance with requirements, design feedback, revisions, and post-launch support. We respond within 24 hours and ensure your complete satisfaction with the final product.',
   },
   {
     icon: Globe,
-    title: 'Worldwide Speed & Reliability',
-    description: 'Your website loads fast everywhere in the world. We use a global CDN with 200+ edge locations, automatic image optimization, lazy loading, and advanced caching. 99.99% uptime SLA, automatic scaling during traffic spikes, and real-time performance monitoring ensure your site is always available and fast.',
+    title: 'Global Performance & Hosting',
+    description: 'Your website loads fast everywhere in the world. We use a global CDN with 200+ edge locations, automatic image optimization, and advanced caching. Complete hosting solution with 99.99% uptime SLA, automatic scaling, and real-time performance monitoring.',
   },
 ]
 
 export default function Features() {
   return (
-    <section id="features" className="section-padding bg-white">
+    <section id="features" className="section-padding bg-dark-bg-primary">
       <div className="container-custom">
         {/* Section Header */}
         <motion.div
@@ -48,14 +48,14 @@ export default function Features() {
           transition={{ duration: 0.6 }}
           className="text-center max-w-3xl mx-auto mb-16"
         >
-          <span className="inline-block text-sm uppercase tracking-widest text-primary-600 font-semibold mb-4">
+          <span className="inline-block text-sm uppercase tracking-widest text-secondary-400 font-semibold mb-4">
             Why Choose Websevix
           </span>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-bold text-neutral-900 mb-4">
-            Everything You Need to Build Amazing Websites
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-bold text-white mb-4">
+            Professional Websites Built with AI
           </h2>
-          <p className="text-lg sm:text-xl text-neutral-600 leading-relaxed">
-            Powered by advanced AI technology, our platform provides all the tools you need to create, launch, and grow your online presence.
+          <p className="text-lg sm:text-xl text-dark-text-secondary leading-relaxed">
+            Our expert team uses advanced AI technology to create custom websites tailored to your business. Get professional results in just a few business days.
           </p>
         </motion.div>
 
@@ -70,20 +70,20 @@ export default function Features() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="group bg-white border border-neutral-200 rounded-xl p-8 hover:shadow-xl hover:-translate-y-2 hover:border-primary-300 transition-all duration-300"
+                className="group bg-dark-bg-secondary border border-dark-border rounded-xl p-8 hover:shadow-xl hover:-translate-y-2 hover:border-primary-500/50 transition-all duration-300"
               >
-                <div className="w-16 h-16 bg-gradient-to-br from-primary-100 to-secondary-100 rounded-lg flex items-center justify-center mb-6">
-                  <Icon className="w-8 h-8 text-primary-600" />
+                <div className="w-16 h-16 bg-gradient-to-br from-primary-500/20 to-secondary-500/20 rounded-lg flex items-center justify-center mb-6 border border-primary-500/30">
+                  <Icon className="w-8 h-8 text-primary-400" />
                 </div>
-                <h3 className="text-2xl font-display font-semibold text-neutral-900 mb-3">
+                <h3 className="text-2xl font-display font-semibold text-white mb-3">
                   {feature.title}
                 </h3>
-                <p className="text-neutral-600 leading-relaxed mb-4">
+                <p className="text-dark-text-secondary leading-relaxed mb-4">
                   {feature.description}
                 </p>
                 <a
-                  href="#"
-                  className="inline-flex items-center gap-2 text-sm font-medium text-primary-600 hover:text-primary-700 group-hover:gap-3 transition-all"
+                  href="#contact"
+                  className="inline-flex items-center gap-2 text-sm font-medium text-secondary-400 hover:text-secondary-300 group-hover:gap-3 transition-all"
                 >
                   Learn more
                   <ArrowRight className="w-4 h-4" />

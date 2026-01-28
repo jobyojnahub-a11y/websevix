@@ -28,12 +28,12 @@ export default function Navigation() {
   ]
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 glassmorphism border-b border-neutral-200/50">
+    <nav className="fixed top-0 left-0 right-0 z-50 glassmorphism border-b border-dark-border">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center">
-            <span className="text-2xl font-display font-bold bg-gradient-to-r from-primary-600 to-secondary-600 bg-clip-text text-transparent">
+            <span className="text-2xl font-display font-bold bg-gradient-to-r from-primary-400 to-secondary-400 bg-clip-text text-transparent">
               Websevix
             </span>
           </Link>
@@ -49,7 +49,7 @@ export default function Navigation() {
               >
                 <Link
                   href={item.href || '#'}
-                  className="text-sm font-medium text-neutral-700 hover:text-primary-600 transition-colors duration-200 flex items-center gap-1"
+                  className="text-sm font-medium text-dark-text-secondary hover:text-secondary-400 transition-colors duration-200 flex items-center gap-1"
                 >
                   {item.name}
                   {item.hasDropdown && <ChevronDown className="w-4 h-4" />}
@@ -57,17 +57,17 @@ export default function Navigation() {
 
                 {/* Features Mega Menu */}
                 {item.name === 'Features' && featuresOpen && (
-                  <div className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-[800px] bg-white rounded-lg shadow-2xl border border-neutral-200 p-6">
+                  <div className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-[800px] bg-dark-bg-tertiary rounded-lg shadow-2xl border border-dark-border p-6">
                     <div className="grid grid-cols-3 gap-6">
                       {featuresItems.map((feature) => (
                         <Link
                           key={feature.title}
                           href="#"
-                          className="p-4 rounded-lg hover:bg-neutral-50 transition-colors"
+                          className="p-4 rounded-lg hover:bg-dark-bg-secondary transition-colors border border-transparent hover:border-primary-500/30"
                         >
                           <div className="text-2xl mb-2">{feature.icon}</div>
-                          <h4 className="font-semibold text-neutral-900 mb-1">{feature.title}</h4>
-                          <p className="text-sm text-neutral-600 line-clamp-2">{feature.desc}</p>
+                          <h4 className="font-semibold text-white mb-1">{feature.title}</h4>
+                          <p className="text-sm text-dark-text-secondary line-clamp-2">{feature.desc}</p>
                         </Link>
                       ))}
                     </div>
@@ -80,14 +80,8 @@ export default function Navigation() {
           {/* Right Side Actions */}
           <div className="hidden lg:flex items-center gap-4">
             <Link
-              href="#login"
-              className="px-5 py-2 text-sm font-medium text-neutral-700 hover:bg-neutral-100 rounded-md transition-colors"
-            >
-              Login
-            </Link>
-            <Link
-              href="#signup"
-              className="px-6 py-3 text-sm font-semibold text-white bg-gradient-to-r from-accent-600 to-accent-700 rounded-lg hover:shadow-accent hover:scale-105 transition-all duration-300 flex items-center gap-2"
+              href="#contact"
+              className="px-6 py-3 text-sm font-semibold text-white bg-gradient-to-r from-primary-500 to-secondary-500 rounded-lg hover:shadow-secondary hover:scale-105 transition-all duration-300 flex items-center gap-2"
             >
               Get Started
               <ArrowRight className="w-4 h-4" />
@@ -96,7 +90,7 @@ export default function Navigation() {
 
           {/* Mobile Menu Button */}
           <button
-            className="lg:hidden p-2 text-neutral-700"
+            className="lg:hidden p-2 text-dark-text-secondary"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           >
             {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -106,29 +100,22 @@ export default function Navigation() {
 
       {/* Mobile Menu */}
       {mobileMenuOpen && (
-        <div className="lg:hidden fixed inset-0 top-20 bg-white/95 backdrop-blur-md z-40">
+        <div className="lg:hidden fixed inset-0 top-20 bg-dark-bg-primary/95 backdrop-blur-md z-40">
           <div className="px-4 py-6 space-y-4">
             {navItems.map((item) => (
               <Link
                 key={item.name}
                 href={item.href || '#'}
-                className="block py-3 text-base font-medium text-neutral-700 hover:text-primary-600"
+                className="block py-3 text-base font-medium text-dark-text-primary hover:text-secondary-400"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 {item.name}
               </Link>
             ))}
-            <div className="pt-4 border-t border-neutral-200 space-y-3">
+            <div className="pt-4 border-t border-dark-border space-y-3">
               <Link
-                href="#login"
-                className="block py-3 text-center text-base font-medium text-neutral-700"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                Login
-              </Link>
-              <Link
-                href="#signup"
-                className="block py-3 text-center text-base font-semibold text-white bg-gradient-to-r from-accent-600 to-accent-700 rounded-lg"
+                href="#contact"
+                className="block py-3 text-center text-base font-semibold text-white bg-gradient-to-r from-primary-500 to-secondary-500 rounded-lg"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Get Started
