@@ -7,74 +7,66 @@ import Link from 'next/link'
 
 const plans = [
   {
-    name: 'Starter',
-    badge: 'Best for Small Business',
-    description: 'Perfect for personal projects and small businesses',
-    monthlyPrice: 199,
-    annualPrice: 179,
+    name: 'Basic',
+    badge: 'Great Start',
+    description: 'Perfect for small businesses and startups',
+    monthlyPrice: 299,
+    annualPrice: 249,
     features: [
-      { text: '1 Custom AI-powered website', included: true },
-      { text: 'Mobile responsive design', included: true },
-      { text: 'Custom domain setup', included: true },
-      { text: 'SSL certificate included', included: true },
-      { text: 'Basic SEO optimization', included: true },
-      { text: '2 rounds of revisions', included: true },
+      { text: 'Professional website design', included: true },
+      { text: 'Mobile-friendly layout', included: true },
+      { text: 'Domain & hosting setup', included: true },
+      { text: 'SSL security certificate', included: true },
+      { text: 'Basic SEO setup', included: true },
+      { text: '2 revision rounds', included: true },
       { text: 'Email support', included: true },
-      { text: 'Delivery in 3-5 business days', included: true },
-      { text: 'E-commerce functionality', included: false },
-      { text: 'Advanced features', included: false },
-      { text: 'Priority support', included: false },
+      { text: '5-day delivery', included: true },
+      { text: 'E-commerce features', included: false },
+      { text: 'Advanced integrations', included: false },
     ],
   },
   {
     name: 'Professional',
     badge: 'Most Popular',
-    description: 'For growing businesses and agencies',
-    monthlyPrice: 499,
-    annualPrice: 449,
+    description: 'Best for growing businesses',
+    monthlyPrice: 599,
+    annualPrice: 499,
     featured: true,
     features: [
-      { text: '1 Custom AI-powered website', included: true },
-      { text: 'Advanced design & branding', included: true },
-      { text: 'Custom domain setup', included: true },
-      { text: 'SSL certificate included', included: true },
-      { text: 'Full SEO optimization', included: true },
+      { text: 'Custom professional design', included: true },
+      { text: 'Advanced branding & styling', included: true },
+      { text: 'Domain & hosting included', included: true },
+      { text: 'SSL & security features', included: true },
+      { text: 'Complete SEO optimization', included: true },
       { text: 'Unlimited revisions', included: true },
-      { text: 'Priority support (24h response)', included: true },
-      { text: 'Delivery in 2-3 business days', included: true },
-      { text: 'E-commerce functionality', included: true },
-      { text: 'Advanced AI features', included: true },
-      { text: 'Analytics setup', included: true },
-      { text: 'Content management system', included: true },
+      { text: 'Priority support', included: true },
+      { text: '3-day fast delivery', included: true },
+      { text: 'E-commerce ready', included: true },
+      { text: 'Analytics & tracking', included: true },
+      { text: 'Content management', included: true },
       { text: 'Social media integration', included: true },
-      { text: 'Dedicated project manager', included: false },
     ],
   },
   {
     name: 'Enterprise',
-    badge: 'For Large Organizations',
-    description: 'Custom solutions for enterprise needs',
+    badge: 'Custom Solutions',
+    description: 'For large businesses with special needs',
     monthlyPrice: null,
     annualPrice: null,
     customPricing: true,
     features: [
-      { text: 'Multiple custom websites', included: true },
-      { text: 'Enterprise-grade design', included: true },
-      { text: 'Multiple custom domains', included: true },
-      { text: 'SSL certificates for all domains', included: true },
-      { text: 'Advanced SEO & marketing', included: true },
-      { text: 'Unlimited revisions', included: true },
+      { text: 'Multiple website projects', included: true },
+      { text: 'Enterprise-level design', included: true },
+      { text: 'Multiple domains & hosting', included: true },
+      { text: 'Advanced security features', included: true },
+      { text: 'Full marketing integration', included: true },
+      { text: 'Unlimited everything', included: true },
       { text: '24/7 dedicated support', included: true },
-      { text: 'Fast-track delivery (1-2 days)', included: true },
-      { text: 'E-commerce & payment integration', included: true },
-      { text: 'Custom AI features', included: true },
-      { text: 'White-label solution', included: true },
-      { text: 'Dedicated account manager', included: true },
-      { text: 'Team collaboration tools', included: true },
-      { text: 'Priority feature requests', included: true },
-      { text: 'SLA guarantee (99.99% uptime)', included: true },
+      { text: '1-2 day express delivery', included: true },
+      { text: 'Advanced e-commerce', included: true },
       { text: 'Custom integrations', included: true },
-      { text: 'Training sessions included', included: true },
+      { text: 'Dedicated project manager', included: true },
+      { text: 'Team training included', included: true },
     ],
   },
 ]
@@ -94,13 +86,13 @@ export default function Pricing() {
           className="text-center max-w-3xl mx-auto mb-12"
         >
           <span className="inline-block text-sm uppercase tracking-widest text-secondary-400 font-semibold mb-4">
-            Transparent Pricing
+            Simple Pricing
           </span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-bold text-white mb-4">
-            Choose the Plan That Fits Your Needs
+            Choose Your Perfect Plan
           </h2>
           <p className="text-lg text-dark-text-secondary">
-            Professional websites delivered in business days. All plans include hosting, SSL, and support.
+            One-time payment. No monthly fees. Includes everything you need to succeed online.
           </p>
         </motion.div>
 

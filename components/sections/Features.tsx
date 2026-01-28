@@ -6,33 +6,33 @@ import { motion } from 'framer-motion'
 const features = [
   {
     icon: Sparkles,
-    title: 'AI-Powered Website Creation',
-    description: 'Our expert team uses advanced AI tools to create professional, custom websites tailored to your business. We combine AI technology with human expertise to deliver websites that perfectly match your brand and requirements. No technical knowledge needed on your end.',
+    title: 'AI-Powered Design',
+    description: 'Our team uses advanced AI tools to create beautiful, professional websites. Get custom designs that match your brand and business needs.',
   },
   {
     icon: Zap,
-    title: 'Fast Delivery in Business Days',
-    description: 'Traditional website development takes weeks or months. With Websevix, get your professional website delivered in just a few business days. Our AI-powered workflow ensures quality and speed, saving you time and money while delivering exceptional results.',
+    title: 'Fast Delivery',
+    description: 'Get your website ready in just 3-5 business days. No more waiting weeks or months for your online presence.',
   },
   {
     icon: Shield,
-    title: 'Enterprise-Level Security',
-    description: 'Every website comes with enterprise-level security features. Automatic SSL certificates, DDoS protection, regular security patches, encrypted data storage, and automatic backups ensure your website and data stay safe. Compliant with GDPR, SOC 2, and industry standards.',
+    title: 'Secure & Reliable',
+    description: 'Every website includes SSL certificates, security protection, and automatic backups. Your site stays safe and secure.',
   },
   {
     icon: Palette,
-    title: 'Custom Design & Branding',
-    description: 'We create unique designs that match your brand identity. Our team uses AI to generate design concepts, then customizes everything - colors, fonts, layouts, imagery - to perfectly represent your business. Complete design control with professional results.',
+    title: 'Custom Branding',
+    description: 'Unique designs tailored to your business. We create websites that perfectly represent your brand and vision.',
   },
   {
     icon: Headphones,
-    title: 'Dedicated Support Team',
-    description: 'Our dedicated support team is available to help you throughout the process. Get assistance with requirements, design feedback, revisions, and post-launch support. We respond within 24 hours and ensure your complete satisfaction with the final product.',
+    title: '24/7 Support',
+    description: 'Get help whenever you need it. Our support team is always ready to assist with any questions or updates.',
   },
   {
     icon: Globe,
-    title: 'Global Performance & Hosting',
-    description: 'Your website loads fast everywhere in the world. We use a global CDN with 200+ edge locations, automatic image optimization, and advanced caching. Complete hosting solution with 99.99% uptime SLA, automatic scaling, and real-time performance monitoring.',
+    title: 'Fast & Global',
+    description: 'Your website loads quickly worldwide with our global hosting network. 99.9% uptime guaranteed.',
   },
 ]
 
@@ -49,13 +49,13 @@ export default function Features() {
           className="text-center max-w-3xl mx-auto mb-16"
         >
           <span className="inline-block text-sm uppercase tracking-widest text-secondary-400 font-semibold mb-4">
-            Why Choose Websevix
+            Why Choose Us
           </span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-bold text-white mb-4">
-            Professional Websites Built with AI
+            Everything You Need for Success
           </h2>
           <p className="text-lg sm:text-xl text-dark-text-secondary leading-relaxed">
-            Our expert team uses advanced AI technology to create custom websites tailored to your business. Get professional results in just a few business days.
+            Professional websites that help your business grow. Fast, secure, and designed to convert visitors into customers.
           </p>
         </motion.div>
 

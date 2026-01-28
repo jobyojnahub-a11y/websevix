@@ -1,11 +1,8 @@
 import Navigation from '@/components/Navigation'
 import Hero from '@/components/sections/Hero'
-import CompanyStats from '@/components/sections/CompanyStats'
-import About from '@/components/sections/About'
+import TrustBar from '@/components/sections/TrustBar'
 import Features from '@/components/sections/Features'
 import HowItWorks from '@/components/sections/HowItWorks'
-import CaseStudies from '@/components/sections/CaseStudies'
-import Team from '@/components/sections/Team'
 import TemplateShowcase from '@/components/sections/TemplateShowcase'
 import Pricing from '@/components/sections/Pricing'
 import Testimonials from '@/components/sections/Testimonials'
@@ -19,12 +16,9 @@ export default function Home() {
     <main className="min-h-screen bg-dark-bg-primary">
       <Navigation />
       <Hero />
-      <CompanyStats />
-      <About />
+      <TrustBar />
       <Features />
       <HowItWorks />
-      <CaseStudies />
-      <Team />
       <TemplateShowcase />
       <Pricing />
       <Testimonials />

@@ -7,40 +7,37 @@ import Link from 'next/link'
 const steps = [
   {
     number: '01',
-    title: 'Contact Us & Share Requirements',
-    description: 'Fill out our contact form with your business details, website requirements, and design preferences. Our team will review your needs and get in touch within 24 hours to discuss your project.',
+    title: 'Tell Us Your Needs',
+    description: 'Share your business details and website requirements. We&apos;ll discuss your goals and create a plan that fits your needs perfectly.',
     features: [
-      'Simple contact form',
-      'Share business type and goals',
-      'Upload reference designs (optional)',
-      'Describe target audience',
-      'Specify features and functionality',
+      'Quick consultation call',
+      'Understand your business',
+      'Define project scope',
+      'Set timeline and budget',
     ],
     icon: MessageSquare,
   },
   {
     number: '02',
-    title: 'We Build Your Website with AI',
-    description: 'Our expert team uses advanced AI tools to create a professional, custom website tailored to your business. We handle design, content, functionality, and optimization - all powered by AI for the best results.',
+    title: 'We Build with AI',
+    description: 'Our team creates your website using AI technology. Professional design, quality content, and all the features you need for success.',
     features: [
-      'AI-powered design generation',
+      'AI-powered design',
       'Custom content creation',
-      'Mobile-responsive layouts',
-      'SEO optimization',
-      'Professional quality guaranteed',
+      'Mobile-friendly layout',
+      'Fast loading speed',
     ],
     icon: Sparkles,
   },
   {
     number: '03',
-    title: 'Review & Launch',
-    description: 'We deliver your website within a few business days. Review the design, request revisions if needed, and once approved, we launch it live with hosting, SSL, and domain setup included.',
+    title: 'Launch & Support',
+    description: 'Review your website, request changes if needed, then we launch it live. Includes hosting, security, and ongoing support.',
     features: [
-      'Fast delivery (few business days)',
-      'Unlimited revisions included',
-      'Custom domain setup',
-      'SSL certificate included',
-      'Complete hosting solution',
+      'Quick delivery (3-5 days)',
+      'Free revisions',
+      'Domain & hosting setup',
+      'Ongoing support',
     ],
     icon: Rocket,
   },
@@ -59,13 +56,13 @@ export default function HowItWorks() {
           className="text-center max-w-3xl mx-auto mb-16"
         >
           <span className="inline-block text-sm uppercase tracking-widest text-secondary-400 font-semibold mb-4">
-            How It Works
+            Simple Process
           </span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-bold text-white mb-4">
-            From Contact to Launch in Simple Steps
+            Get Your Website in 3 Easy Steps
           </h2>
           <p className="text-lg sm:text-xl text-dark-text-secondary">
-            Professional websites delivered in just a few business days
+            From idea to live website in just a few days
           </p>
         </motion.div>
 

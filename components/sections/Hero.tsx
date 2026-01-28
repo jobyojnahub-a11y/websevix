@@ -53,15 +53,15 @@ export default function Hero() {
             transition={{ duration: 0.8, delay: 0.2 }}
           >
             <h1 className="text-4xl sm:text-5xl lg:text-7xl font-display font-extrabold text-white mb-6 leading-tight tracking-tight">
-              Transform Your Business with
+              Professional Websites
               <br />
               <span className="bg-gradient-to-r from-secondary-400 via-primary-400 to-secondary-400 bg-clip-text text-transparent bg-[length:200%_auto] animate-[gradient_3s_ease_infinite]">
-                AI-Powered Websites
+                Built with AI
               </span>
             </h1>
 
             <p className="text-lg sm:text-xl lg:text-2xl text-dark-text-secondary mb-10 max-w-2xl leading-relaxed">
-              We&apos;re Websevix - a technology startup revolutionizing web development. Our expert team combines cutting-edge AI with human creativity to deliver enterprise-grade websites that drive business growth.
+              Get a custom, professional website for your business. Our team uses AI technology to create beautiful, fast websites that help you grow online.
             </p>
 
             {/* CTA Buttons */}
