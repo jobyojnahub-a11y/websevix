@@ -4,8 +4,8 @@
 
 @layer base {
   :root {
-    --font-display: 'Space Grotesk', -apple-system, sans-serif;
-    --font-body: 'Poppins', -apple-system, sans-serif;
+    --font-display: 'Orbitron', -apple-system, sans-serif;
+    --font-body: 'Inter', -apple-system, sans-serif;
     --font-mono: 'JetBrains Mono', 'Fira Code', Consolas, monospace;
   }
 
@@ -20,6 +20,7 @@
 
   h1, h2, h3, h4, h5, h6 {
     @apply font-display;
+    text-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
   }
 }
 

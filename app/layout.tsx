@@ -1,19 +1,26 @@
 import type { Metadata } from 'next'
-import { Space_Grotesk, Poppins } from 'next/font/google'
+import { Orbitron, Inter, JetBrains_Mono } from 'next/font/google'
 import './globals.css'
 
-const spaceGrotesk = Space_Grotesk({ 
+const orbitron = Orbitron({ 
   subsets: ['latin'],
   variable: '--font-display',
   display: 'swap',
-  weight: ['400', '500', '600', '700'],
+  weight: ['400', '500', '600', '700', '800', '900'],
 })
 
-const poppins = Poppins({ 
+const inter = Inter({ 
   subsets: ['latin'],
   variable: '--font-body',
   display: 'swap',
   weight: ['300', '400', '500', '600', '700'],
+})
+
+const jetbrainsMono = JetBrains_Mono({
+  subsets: ['latin'],
+  variable: '--font-mono',
+  display: 'swap',
+  weight: ['400', '500', '600', '700'],
 })
 
 export const metadata: Metadata = {
@@ -44,8 +51,8 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={`${spaceGrotesk.variable} ${poppins.variable} dark`}>
-      <body className="dark:bg-dark-bg-primary dark:text-dark-text-primary">{children}</body>
+    <html lang="en" className={`${orbitron.variable} ${inter.variable} ${jetbrainsMono.variable} dark`}>
+      <body className="dark:bg-dark-bg-primary dark:text-dark-text-primary overflow-x-hidden">{children}</body>
     </html>
   )
 }
