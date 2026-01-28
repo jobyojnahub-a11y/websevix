@@ -1,13 +1,6 @@
 import type { Metadata } from 'next'
-import { Orbitron, Inter, JetBrains_Mono } from 'next/font/google'
+import { Inter, Manrope } from 'next/font/google'
 import './globals.css'
-
-const orbitron = Orbitron({ 
-  subsets: ['latin'],
-  variable: '--font-display',
-  display: 'swap',
-  weight: ['400', '500', '600', '700', '800', '900'],
-})
 
 const inter = Inter({ 
   subsets: ['latin'],
@@ -16,11 +9,11 @@ const inter = Inter({
   weight: ['300', '400', '500', '600', '700'],
 })
 
-const jetbrainsMono = JetBrains_Mono({
+const manrope = Manrope({ 
   subsets: ['latin'],
-  variable: '--font-mono',
+  variable: '--font-display',
   display: 'swap',
-  weight: ['400', '500', '600', '700'],
+  weight: ['400', '500', '600', '700', '800'],
 })
 
 export const metadata: Metadata = {
@@ -51,7 +44,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={`${orbitron.variable} ${inter.variable} ${jetbrainsMono.variable} dark`}>
+    <html lang="en" className={`${inter.variable} ${manrope.variable} dark`}>
       <body className="dark:bg-dark-bg-primary dark:text-dark-text-primary overflow-x-hidden">{children}</body>
     </html>
   )
