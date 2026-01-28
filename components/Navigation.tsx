@@ -1,30 +1,20 @@
 'use client'
 
 import { useState } from 'react'
-import { Menu, X, ChevronDown, ArrowRight } from 'lucide-react'
+import { Menu, X, ArrowRight } from 'lucide-react'
 import Link from 'next/link'
 
 export default function Navigation() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-  const [featuresOpen, setFeaturesOpen] = useState(false)
-  const [templatesOpen, setTemplatesOpen] = useState(false)
 
   const navItems = [
-    { name: 'Features', href: '#features' },
-    { name: 'How It Works', href: '#how-it-works' },
-    { name: 'Templates', href: '#templates' },
-    { name: 'Pricing', href: '#pricing' },
-    { name: 'Contact', href: '#contact' },
+    { name: 'Features', href: '#features', hasDropdown: false },
+    { name: 'How It Works', href: '#how-it-works', hasDropdown: false },
+    { name: 'Templates', href: '#templates', hasDropdown: false },
+    { name: 'Pricing', href: '#pricing', hasDropdown: false },
+    { name: 'Contact', href: '#contact', hasDropdown: false },
   ]
 
-  const featuresItems = [
-    { icon: '✨', title: 'AI Website Builder', desc: 'Conversational AI that understands your needs' },
-    { icon: '📐', title: 'Smart Templates', desc: 'Industry-specific templates that adapt' },
-    { icon: '🚀', title: 'Instant Deployment', desc: 'Go live in one click with automatic SSL' },
-    { icon: '✏️', title: 'Visual Editor', desc: 'Drag and drop interface with real-time preview' },
-    { icon: '🔍', title: 'SEO Optimization', desc: 'Built-in SEO tools and best practices' },
-    { icon: '📊', title: 'Analytics Dashboard', desc: 'Track visitors and performance metrics' },
-  ]
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 glassmorphism border-b border-dark-border">
@@ -40,39 +30,13 @@ export default function Navigation() {
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center gap-8">
             {navItems.map((item) => (
-              <div
+              <Link
                 key={item.name}
-                className="relative group"
-                onMouseEnter={() => item.hasDropdown && item.name === 'Features' && setFeaturesOpen(true)}
-                onMouseLeave={() => item.hasDropdown && item.name === 'Features' && setFeaturesOpen(false)}
+                href={item.href || '#'}
+                className="text-sm font-medium text-dark-text-secondary hover:text-secondary-400 transition-colors duration-200"
               >
-                <Link
-                  href={item.href || '#'}
-                  className="text-sm font-medium text-dark-text-secondary hover:text-secondary-400 transition-colors duration-200 flex items-center gap-1"
-                >
-                  {item.name}
-                  {item.hasDropdown && <ChevronDown className="w-4 h-4" />}
-                </Link>
-
-                {/* Features Mega Menu */}
-                {item.name === 'Features' && featuresOpen && (
-                  <div className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-[800px] bg-dark-bg-tertiary rounded-lg shadow-2xl border border-dark-border p-6">
-                    <div className="grid grid-cols-3 gap-6">
-                      {featuresItems.map((feature) => (
-                        <Link
-                          key={feature.title}
-                          href="#"
-                          className="p-4 rounded-lg hover:bg-dark-bg-secondary transition-colors border border-transparent hover:border-primary-500/30"
-                        >
-                          <div className="text-2xl mb-2">{feature.icon}</div>
-                          <h4 className="font-semibold text-white mb-1">{feature.title}</h4>
-                          <p className="text-sm text-dark-text-secondary line-clamp-2">{feature.desc}</p>
-                        </Link>
-                      ))}
-                    </div>
-                  </div>
-                )}
-              </div>
+                {item.name}
+              </Link>
             ))}
           </div>
 
