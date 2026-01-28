@@ -168,12 +168,12 @@ export default function Pricing() {
                   <div className="flex items-baseline gap-1">
                     <span className="text-2xl font-medium text-dark-text-secondary">$</span>
                     <span className="text-5xl font-black text-white">
-                      {billingCycle === 'monthly' ? plan.monthlyPrice : plan.annualPrice}
+                      {billingCycle === 'monthly' ? (plan.monthlyPrice ?? 0) : (plan.annualPrice ?? 0)}
                     </span>
                     <span className="text-lg text-dark-text-secondary">one-time</span>
                   </div>
                 )}
-                {!plan.customPricing && billingCycle === 'annual' && (
+                {!plan.customPricing && billingCycle === 'annual' && plan.monthlyPrice !== null && plan.annualPrice !== null && (
                   <div className="mt-2 inline-block px-3 py-1 bg-success-500/20 text-success-400 rounded text-xs font-semibold border border-success-500/30">
                     Save ${plan.monthlyPrice - plan.annualPrice} with annual payment
                   </div>
