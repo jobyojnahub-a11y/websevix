@@ -10,11 +10,11 @@ export default function Navigation() {
   const [templatesOpen, setTemplatesOpen] = useState(false)
 
   const navItems = [
-    { name: 'Features', hasDropdown: true, href: '#features' },
-    { name: 'Templates', hasDropdown: true, href: '#templates' },
-    { name: 'Pricing', href: '#pricing' },
     { name: 'About', href: '#about' },
-    { name: 'Blog', href: '#blog' },
+    { name: 'Features', hasDropdown: true, href: '#features' },
+    { name: 'Case Studies', href: '#case-studies' },
+    { name: 'Team', href: '#team' },
+    { name: 'Pricing', href: '#pricing' },
     { name: 'Contact', href: '#contact' },
   ]
 

@@ -53,15 +53,15 @@ export default function Hero() {
             transition={{ duration: 0.8, delay: 0.2 }}
           >
             <h1 className="text-4xl sm:text-5xl lg:text-7xl font-display font-extrabold text-white mb-6 leading-tight tracking-tight">
-              Custom AI-Powered Websites
+              Transform Your Business with
               <br />
               <span className="bg-gradient-to-r from-secondary-400 via-primary-400 to-secondary-400 bg-clip-text text-transparent bg-[length:200%_auto] animate-[gradient_3s_ease_infinite]">
-                Built for Your Business
+                AI-Powered Websites
               </span>
             </h1>
 
             <p className="text-lg sm:text-xl lg:text-2xl text-dark-text-secondary mb-10 max-w-2xl leading-relaxed">
-              Share your requirements with our team. We&apos;ll use AI to create a professional, custom website tailored to your business. Get your dream website delivered in just a few business days.
+              We&apos;re Websevix - a technology startup revolutionizing web development. Our expert team combines cutting-edge AI with human creativity to deliver enterprise-grade websites that drive business growth.
             </p>
 
             {/* CTA Buttons */}
@@ -84,20 +84,22 @@ export default function Hero() {
             {/* Trust Indicators */}
             <div className="flex flex-wrap gap-8 items-center">
               <div>
-                <div className="text-3xl font-bold text-secondary-400">10,000+</div>
-                <div className="text-sm text-dark-text-secondary">Websites Delivered</div>
+                <div className="text-3xl font-bold text-secondary-400">500+</div>
+                <div className="text-sm text-dark-text-secondary">Projects Delivered</div>
               </div>
               <div>
-                <div className="flex items-center gap-1 mb-1">
-                  <span className="text-2xl text-warning-500">★★★★★</span>
-                </div>
-                <div className="text-sm text-dark-text-secondary">4.9/5 from 2,000+ clients</div>
+                <div className="text-3xl font-bold text-primary-400">98%</div>
+                <div className="text-sm text-dark-text-secondary">Client Satisfaction</div>
+              </div>
+              <div>
+                <div className="text-3xl font-bold text-accent-400">24h</div>
+                <div className="text-sm text-dark-text-secondary">Response Time</div>
               </div>
               <div className="flex items-center gap-2">
                 <div className="w-6 h-6 rounded-full bg-success-500 flex items-center justify-center">
                   <span className="text-white text-xs">✓</span>
                 </div>
-                <div className="text-sm text-dark-text-secondary">AI-Powered & Professional</div>
+                <div className="text-sm text-dark-text-secondary">Enterprise Grade Security</div>
               </div>
             </div>
           </motion.div>
