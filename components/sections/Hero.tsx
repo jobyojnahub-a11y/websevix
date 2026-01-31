@@ -17,28 +17,24 @@ export default function Hero() {
 
   return (
     <section ref={containerRef} className="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
-      {/* Pure Black Background with Spaceship Colors */}
+      {/* Professional Background with Custom Image */}
       <div className="absolute inset-0 bg-black">
-        {/* Animated Grid */}
-        <motion.div 
-          className="absolute inset-0 opacity-20"
-          animate={{ 
-            backgroundPosition: ['0% 0%', '100% 100%'],
-          }}
-          transition={{ duration: 20, repeat: Infinity, ease: 'linear' }}
+        {/* Background Image */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-80"
           style={{
-            backgroundImage: `
-              linear-gradient(rgba(59, 130, 246, 0.3) 1px, transparent 1px),
-              linear-gradient(90deg, rgba(59, 130, 246, 0.3) 1px, transparent 1px)
-            `,
-            backgroundSize: '50px 50px'
+            backgroundImage: 'url(https://i.ibb.co/Rp5JbVrm/Gemini-Generated-Image-bsivrbsivrbsivrb.png)',
+            backgroundBlendMode: 'overlay'
           }}
         />
         
-        {/* Spaceship Primary Color Orbs */}
+        {/* Dark Overlay for Better Text Readability */}
+        <div className="absolute inset-0 bg-black/40" />
+        
+        {/* Spaceship Primary Color Orbs - Subtle */}
         <motion.div
           className="absolute top-20 left-20 w-64 h-64 rounded-full blur-3xl"
-          style={{ backgroundColor: 'rgba(99, 102, 241, 0.15)' }}
+          style={{ backgroundColor: 'rgba(99, 102, 241, 0.1)' }}
           animate={{ 
             scale: [1, 1.2, 1],
             x: [0, 50, 0],
@@ -48,7 +44,7 @@ export default function Hero() {
         />
         <motion.div
           className="absolute bottom-32 right-20 w-48 h-48 rounded-full blur-3xl"
-          style={{ backgroundColor: 'rgba(139, 92, 246, 0.15)' }}
+          style={{ backgroundColor: 'rgba(139, 92, 246, 0.1)' }}
           animate={{ 
             scale: [1, 1.3, 1],
             x: [0, -40, 0],
@@ -58,7 +54,7 @@ export default function Hero() {
         />
         <motion.div
           className="absolute top-1/2 left-1/2 w-32 h-32 rounded-full blur-2xl"
-          style={{ backgroundColor: 'rgba(6, 182, 212, 0.15)' }}
+          style={{ backgroundColor: 'rgba(6, 182, 212, 0.1)' }}
           animate={{ 
             scale: [1, 1.4, 1],
             rotate: [0, 360],

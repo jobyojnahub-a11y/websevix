@@ -43,17 +43,13 @@ export default function Navigation() {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            <Link href="/" className="flex items-center gap-2">
-              <motion.div
-                animate={{ rotate: [0, 360] }}
-                transition={{ duration: 20, repeat: Infinity, ease: 'linear' }}
-                className="w-8 h-8 bg-gradient-to-r from-emerald-500 to-blue-600 rounded-lg flex items-center justify-center"
-              >
-                <Rocket className="w-5 h-5 text-white" />
-              </motion.div>
-              <span className="text-2xl font-bold bg-gradient-to-r from-emerald-400 via-blue-400 to-teal-400 bg-clip-text text-transparent">
-                Websevix
-              </span>
+            <Link href="/" className="flex items-center">
+              <img 
+                src="https://i.ibb.co/QFczxnnH/ebsevix-X-Design.png" 
+                alt="Websevix Logo" 
+                className="h-10 w-auto object-contain"
+                style={{ filter: 'brightness(1.2)' }}
+              />
             </Link>
           </motion.div>
 
