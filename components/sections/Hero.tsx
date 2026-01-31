@@ -19,9 +19,9 @@ export default function Hero() {
     <section ref={containerRef} className="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
       {/* Professional Background with Custom Image */}
       <div className="absolute inset-0 bg-black">
-        {/* Background Image */}
+        {/* Background Image - Low Intensity */}
         <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-80"
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-30"
           style={{
             backgroundImage: 'url(https://i.ibb.co/Rp5JbVrm/Gemini-Generated-Image-bsivrbsivrbsivrb.png)',
             backgroundBlendMode: 'overlay'
@@ -29,7 +29,7 @@ export default function Hero() {
         />
         
         {/* Dark Overlay for Better Text Readability */}
-        <div className="absolute inset-0 bg-black/40" />
+        <div className="absolute inset-0 bg-black/60" />
         
         {/* Spaceship Primary Color Orbs - Subtle */}
         <motion.div
