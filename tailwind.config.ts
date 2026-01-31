@@ -10,17 +10,22 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
+        spaceship: {
+          primary: '#6366f1', // Spaceship primary color
+          secondary: '#8b5cf6',
+          accent: '#06b6d4',
+        },
         primary: {
           50: '#DEF0FF',
           100: '#DEF0FF',
           200: '#AECFFF',
           300: '#7EAAF1',
           400: '#4E86E4',
-          500: '#1E61D7',
-          600: '#1952BA',
-          700: '#14429D',
-          800: '#0F3380',
-          900: '#0A2463',
+          500: '#6366f1', // Using spaceship primary
+          600: '#5855eb',
+          700: '#4f46e5',
+          800: '#4338ca',
+          900: '#3730a3',
         },
         secondary: {
           50: '#E6FCFF',
@@ -59,14 +64,14 @@ const config: Config = {
           900: '#212529',
         },
         dark: {
-          'bg-primary': '#0D1B2A',
-          'bg-secondary': '#1B263B',
-          'bg-tertiary': '#293548',
-          'surface': '#415A77',
-          'border': '#566B85',
-          'text-primary': '#F8F9FA',
-          'text-secondary': '#CED4DA',
-          'text-muted': '#ADB5BD',
+          'bg-primary': '#000000', // Pure black background
+          'bg-secondary': '#111111',
+          'bg-tertiary': '#1a1a1a',
+          'surface': '#2a2a2a',
+          'border': '#333333',
+          'text-primary': '#6366f1', // Spaceship primary for text
+          'text-secondary': '#a1a1aa',
+          'text-muted': '#71717a',
         },
         success: {
           100: '#D1FAE5',

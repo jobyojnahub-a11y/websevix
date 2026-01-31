@@ -7,43 +7,43 @@ import { useRef } from 'react'
 const features = [
   {
     icon: Sparkles,
-    title: 'AI-Powered Design',
-    description: 'Advanced AI tools create stunning, professional websites that perfectly match your brand and business vision.',
+    title: 'AI-Powered Website Design',
+    description: 'Our team creates stunning, professional websites using advanced AI tools. Custom designs that perfectly match your brand and business goals.',
     gradient: 'from-blue-500 to-purple-600',
     delay: 0
   },
   {
-    icon: Rocket,
-    title: 'Lightning Fast',
-    description: 'Get your website ready in 3-5 business days. No more waiting weeks for your digital presence to launch.',
-    gradient: 'from-purple-500 to-pink-600',
+    icon: Globe,
+    title: 'Domain Registration',
+    description: 'Get the perfect domain name for your business. We handle registration, DNS setup, and domain management for you.',
+    gradient: 'from-green-500 to-blue-600',
     delay: 0.1
   },
   {
-    icon: Shield,
-    title: 'Enterprise Security',
-    description: 'SSL certificates, advanced protection, and automatic backups keep your website secure and running smoothly.',
-    gradient: 'from-green-500 to-teal-600',
+    icon: Database,
+    title: 'Web Hosting Services',
+    description: 'Fast, reliable hosting with 99.9% uptime guarantee. SSL certificates, daily backups, and global CDN included.',
+    gradient: 'from-purple-500 to-pink-600',
     delay: 0.2
   },
   {
-    icon: Palette,
-    title: 'Custom Branding',
-    description: 'Unique designs tailored specifically to your business. Stand out with a website that represents your vision.',
+    icon: Rocket,
+    title: 'Fast Delivery',
+    description: 'Complete website with hosting and domain ready in just 3-5 business days. No more waiting weeks for your online presence.',
     gradient: 'from-orange-500 to-red-600',
     delay: 0.3
   },
   {
-    icon: Headphones,
-    title: '24/7 Expert Support',
-    description: 'Round-the-clock assistance from our expert team. Get help whenever you need it, however you need it.',
-    gradient: 'from-cyan-500 to-blue-600',
+    icon: Shield,
+    title: 'Complete Security',
+    description: 'SSL certificates, malware protection, automatic backups, and 24/7 monitoring keep your website safe and secure.',
+    gradient: 'from-teal-500 to-cyan-600',
     delay: 0.4
   },
   {
-    icon: Globe,
-    title: 'Global Performance',
-    description: 'Lightning-fast loading worldwide with our global CDN network. 99.9% uptime guaranteed for maximum reliability.',
+    icon: Headphones,
+    title: '24/7 Support & Maintenance',
+    description: 'Round-the-clock technical support, regular updates, and website maintenance. We keep your site running perfectly.',
     gradient: 'from-indigo-500 to-purple-600',
     delay: 0.5
   },
