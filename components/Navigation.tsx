@@ -1,92 +1,156 @@
 'use client'
 
-import { useState } from 'react'
-import { Menu, X, ArrowRight } from 'lucide-react'
+import { useState, useEffect } from 'react'
+import { Menu, X, ArrowRight, Rocket } from 'lucide-react'
+import { motion, AnimatePresence } from 'framer-motion'
 import Link from 'next/link'
 
 export default function Navigation() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const [scrolled, setScrolled] = useState(false)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 50)
+    }
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
 
   const navItems = [
-    { name: 'Features', href: '#features', hasDropdown: false },
-    { name: 'How It Works', href: '#how-it-works', hasDropdown: false },
-    { name: 'Templates', href: '#templates', hasDropdown: false },
-    { name: 'Pricing', href: '#pricing', hasDropdown: false },
-    { name: 'Contact', href: '#contact', hasDropdown: false },
+    { name: 'Features', href: '#features' },
+    { name: 'How It Works', href: '#how-it-works' },
+    { name: 'Templates', href: '#templates' },
+    { name: 'Pricing', href: '#pricing' },
+    { name: 'Contact', href: '#contact' },
   ]
 
-
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 glassmorphism border-b border-dark-border">
+    <motion.nav 
+      initial={{ y: -100 }}
+      animate={{ y: 0 }}
+      transition={{ duration: 0.6 }}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        scrolled 
+          ? 'bg-slate-900/80 backdrop-blur-xl border-b border-white/10 shadow-2xl' 
+          : 'bg-transparent'
+      }`}
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
-          {/* Logo */}
-          <Link href="/" className="flex items-center">
-            <span className="text-2xl font-display font-bold bg-gradient-to-r from-primary-400 to-secondary-400 bg-clip-text text-transparent">
-              Websevix
-            </span>
-          </Link>
-
-          {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center gap-8">
-            {navItems.map((item) => (
-              <Link
-                key={item.name}
-                href={item.href || '#'}
-                className="text-sm font-medium text-dark-text-secondary hover:text-secondary-400 transition-colors duration-200"
+          {/* Logo - Spaceship Style */}
+          <motion.div
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            <Link href="/" className="flex items-center gap-2">
+              <motion.div
+                animate={{ rotate: [0, 360] }}
+                transition={{ duration: 20, repeat: Infinity, ease: 'linear' }}
+                className="w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center"
               >
-                {item.name}
-              </Link>
+                <Rocket className="w-5 h-5 text-white" />
+              </motion.div>
+              <span className="text-2xl font-bold bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent">
+                Websevix
+              </span>
+            </Link>
+          </motion.div>
+
+          {/* Desktop Navigation - Spaceship Style */}
+          <div className="hidden lg:flex items-center gap-8">
+            {navItems.map((item, index) => (
+              <motion.div
+                key={item.name}
+                initial={{ opacity: 0, y: -20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                whileHover={{ scale: 1.05 }}
+              >
+                <Link
+                  href={item.href}
+                  className="relative text-sm font-medium text-white/80 hover:text-white transition-colors duration-200 group"
+                >
+                  {item.name}
+                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-400 to-purple-400 group-hover:w-full transition-all duration-300" />
+                </Link>
+              </motion.div>
             ))}
           </div>
 
-          {/* Right Side Actions */}
+          {/* Right Side Actions - Spaceship Style */}
           <div className="hidden lg:flex items-center gap-4">
-            <Link
-              href="#contact"
-              className="px-6 py-3 text-sm font-semibold text-white bg-gradient-to-r from-primary-500 to-secondary-500 rounded-lg hover:shadow-secondary hover:scale-105 transition-all duration-300 flex items-center gap-2"
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
             >
-              Get Started
-              <ArrowRight className="w-4 h-4" />
-            </Link>
+              <Link
+                href="#contact"
+                className="group px-6 py-3 text-sm font-semibold text-white bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl hover:from-blue-700 hover:to-purple-700 transition-all duration-300 flex items-center gap-2 shadow-lg hover:shadow-xl"
+              >
+                Launch Website
+                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+              </Link>
+            </motion.div>
           </div>
 
-          {/* Mobile Menu Button */}
-          <button
-            className="lg:hidden p-2 text-dark-text-secondary"
+          {/* Mobile Menu Button - Spaceship Style */}
+          <motion.button
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            className="lg:hidden p-2 text-white/80 hover:text-white bg-white/10 backdrop-blur-sm rounded-lg border border-white/20"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           >
             {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-          </button>
+          </motion.button>
         </div>
       </div>
 
-      {/* Mobile Menu */}
-      {mobileMenuOpen && (
-        <div className="lg:hidden fixed inset-0 top-20 bg-dark-bg-primary/95 backdrop-blur-md z-40">
-          <div className="px-4 py-6 space-y-4">
-            {navItems.map((item) => (
-              <Link
-                key={item.name}
-                href={item.href || '#'}
-                className="block py-3 text-base font-medium text-dark-text-primary hover:text-secondary-400"
-                onClick={() => setMobileMenuOpen(false)}
+      {/* Mobile Menu - Spaceship Style */}
+      <AnimatePresence>
+        {mobileMenuOpen && (
+          <motion.div
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: 'auto' }}
+            exit={{ opacity: 0, height: 0 }}
+            transition={{ duration: 0.3 }}
+            className="lg:hidden bg-slate-900/95 backdrop-blur-xl border-t border-white/10"
+          >
+            <div className="px-4 py-6 space-y-4">
+              {navItems.map((item, index) => (
+                <motion.div
+                  key={item.name}
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.3, delay: index * 0.1 }}
+                >
+                  <Link
+                    href={item.href}
+                    className="block py-3 text-base font-medium text-white/80 hover:text-white transition-colors"
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    {item.name}
+                  </Link>
+                </motion.div>
+              ))}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.3, delay: 0.5 }}
+                className="pt-4 border-t border-white/10"
               >
-                {item.name}
-              </Link>
-            ))}
-            <div className="pt-4 border-t border-dark-border space-y-3">
-              <Link
-                href="#contact"
-                className="block py-3 text-center text-base font-semibold text-white bg-gradient-to-r from-primary-500 to-secondary-500 rounded-lg"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                Get Started
-              </Link>
+                <Link
+                  href="#contact"
+                  className="block py-3 text-center text-base font-semibold text-white bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  Launch Website
+                </Link>
+              </motion.div>
             </div>
-          </div>
-        </div>
-      )}
-    </nav>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </motion.nav>
   )
 }

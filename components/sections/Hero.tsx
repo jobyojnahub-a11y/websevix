@@ -1,127 +1,213 @@
 'use client'
 
-import { ArrowRight, Sparkles, Zap, Code, Palette } from 'lucide-react'
-import { motion } from 'framer-motion'
+import { ArrowRight, Sparkles, Zap, Code, Palette, Globe, Rocket } from 'lucide-react'
+import { motion, useScroll, useTransform } from 'framer-motion'
 import Link from 'next/link'
+import { useRef } from 'react'
 
 export default function Hero() {
+  const containerRef = useRef<HTMLDivElement>(null)
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    offset: ["start start", "end start"]
+  })
+  
+  const y = useTransform(scrollYProgress, [0, 1], ["0%", "50%"])
+  const opacity = useTransform(scrollYProgress, [0, 1], [1, 0])
+
   return (
-    <section className="relative min-h-screen flex items-center justify-center pt-20 bg-dark-bg-primary">
-      {/* Clean Minimal Background */}
-      <div className="absolute inset-0 bg-gradient-to-b from-dark-bg-primary via-dark-bg-primary to-primary-950/50">
-        {/* Subtle Grid */}
-        <div className="absolute inset-0 opacity-5">
-          <div className="absolute inset-0 bg-[linear-gradient(rgba(59,130,246,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(59,130,246,0.1)_1px,transparent_1px)] bg-[size:100px_100px]" />
-        </div>
-      </div>
-
-      {/* Minimal Floating Elements */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+    <section ref={containerRef} className="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
+      {/* Spaceship-style Animated Background */}
+      <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900">
+        {/* Animated Grid */}
+        <motion.div 
+          className="absolute inset-0 opacity-20"
+          animate={{ 
+            backgroundPosition: ['0% 0%', '100% 100%'],
+          }}
+          transition={{ duration: 20, repeat: Infinity, ease: 'linear' }}
+          style={{
+            backgroundImage: `
+              linear-gradient(rgba(59, 130, 246, 0.3) 1px, transparent 1px),
+              linear-gradient(90deg, rgba(59, 130, 246, 0.3) 1px, transparent 1px)
+            `,
+            backgroundSize: '50px 50px'
+          }}
+        />
+        
+        {/* Floating Orbs - Spaceship Style */}
         <motion.div
-          className="absolute top-1/4 left-1/4 w-32 h-32 bg-primary-500/10 rounded-full blur-2xl"
-          animate={{ scale: [1, 1.1, 1], opacity: [0.3, 0.5, 0.3] }}
-          transition={{ duration: 8, repeat: Infinity, ease: 'easeInOut' }}
+          className="absolute top-20 left-20 w-64 h-64 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-full blur-3xl"
+          animate={{ 
+            scale: [1, 1.2, 1],
+            x: [0, 50, 0],
+            y: [0, -30, 0],
+          }}
+          transition={{ duration: 15, repeat: Infinity, ease: 'easeInOut' }}
         />
         <motion.div
-          className="absolute bottom-1/4 right-1/4 w-24 h-24 bg-secondary-500/10 rounded-full blur-2xl"
-          animate={{ scale: [1, 1.2, 1], opacity: [0.2, 0.4, 0.2] }}
-          transition={{ duration: 10, repeat: Infinity, ease: 'easeInOut', delay: 2 }}
+          className="absolute bottom-32 right-20 w-48 h-48 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-full blur-3xl"
+          animate={{ 
+            scale: [1, 1.3, 1],
+            x: [0, -40, 0],
+            y: [0, 20, 0],
+          }}
+          transition={{ duration: 12, repeat: Infinity, ease: 'easeInOut', delay: 3 }}
+        />
+        <motion.div
+          className="absolute top-1/2 left-1/2 w-32 h-32 bg-gradient-to-r from-indigo-500/20 to-pink-500/20 rounded-full blur-2xl"
+          animate={{ 
+            scale: [1, 1.4, 1],
+            rotate: [0, 360],
+          }}
+          transition={{ duration: 25, repeat: Infinity, ease: 'linear' }}
         />
       </div>
 
-      <div className="container-custom relative z-10 px-4 sm:px-6 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Left Column - Text Content */}
+      {/* Parallax Content */}
+      <motion.div 
+        style={{ y, opacity }}
+        className="container-custom relative z-10 px-4 sm:px-6 lg:px-8"
+      >
+        <div className="text-center max-w-5xl mx-auto">
+          {/* Spaceship-style Badge */}
           <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full text-sm text-white/90 mb-8"
+          >
+            <Rocket className="w-4 h-4" />
+            Launch your digital presence
+          </motion.div>
+
+          {/* Main Heading - Spaceship Style */}
+          <motion.h1 
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
+            className="text-6xl sm:text-7xl lg:text-8xl font-bold text-white mb-6 leading-tight"
           >
-            <motion.h1 
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              className="text-5xl sm:text-6xl lg:text-7xl font-display font-bold text-white mb-6 leading-tight"
+            <span className="block">A website</span>
+            <motion.span 
+              className="block bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent"
+              animate={{ 
+                backgroundPosition: ['0% 50%', '100% 50%', '0% 50%'],
+              }}
+              transition={{ duration: 5, repeat: Infinity, ease: 'linear' }}
+              style={{
+                backgroundSize: '200% 200%'
+              }}
             >
-              Build your website
-              <br />
-              <span className="text-primary-400">for free</span>
-            </motion.h1>
+              odyssey
+            </motion.span>
+          </motion.h1>
 
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="text-xl text-dark-text-secondary mb-8 max-w-xl leading-relaxed font-light"
-            >
-              More than a website builder, Websevix helps you create professional websites with AI. Start free, then get premium features.
-            </motion.p>
+          {/* Spaceship-style Subtitle */}
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className="text-xl sm:text-2xl text-white/80 mb-12 max-w-3xl mx-auto leading-relaxed font-light"
+          >
+            Get next-level website creation through high-performance tools and AI for complete digital control.
+          </motion.p>
 
-            {/* Clean CTA */}
+          {/* Spaceship-style CTAs */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.6 }}
+            className="flex flex-col sm:flex-row gap-4 justify-center mb-16"
+          >
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-              className="flex flex-col sm:flex-row gap-4 mb-12"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
             >
               <Link
                 href="#contact"
-                className="px-8 py-4 bg-primary-600 text-white font-medium rounded-lg hover:bg-primary-700 transition-colors duration-200"
+                className="group px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-xl hover:from-blue-700 hover:to-purple-700 transition-all duration-300 flex items-center gap-2"
               >
-                Start free trial
-              </Link>
-              <Link
-                href="#pricing"
-                className="px-8 py-4 border border-dark-border text-dark-text-primary font-medium rounded-lg hover:border-primary-500 hover:text-primary-400 transition-colors duration-200"
-              >
-                View pricing
+                Launch Website
+                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Link>
             </motion.div>
-
-            {/* Simple Trust Line */}
             <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.6, delay: 0.6 }}
-              className="text-sm text-dark-text-muted"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
             >
-              You agree to receive Websevix marketing emails.
+              <Link
+                href="#pricing"
+                className="px-8 py-4 bg-white/10 backdrop-blur-sm border border-white/20 text-white font-semibold rounded-xl hover:bg-white/20 transition-all duration-300"
+              >
+                Explore Plans
+              </Link>
             </motion.div>
           </motion.div>
 
-          {/* Clean Right Side Visual */}
+          {/* Spaceship-style Stats */}
           <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-            className="relative"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.8 }}
+            className="grid grid-cols-3 gap-8 max-w-2xl mx-auto"
           >
-            <div className="relative bg-dark-bg-secondary rounded-xl p-6 border border-dark-border">
-              {/* Simple Browser Header */}
-              <div className="flex items-center gap-2 mb-4">
-                <div className="flex gap-2">
-                  <div className="w-3 h-3 rounded-full bg-red-500/70"></div>
-                  <div className="w-3 h-3 rounded-full bg-yellow-500/70"></div>
-                  <div className="w-3 h-3 rounded-full bg-green-500/70"></div>
-                </div>
-                <div className="flex-1 bg-dark-bg-tertiary rounded px-3 py-1 text-xs text-dark-text-muted">
-                  yoursite.websevix.com
-                </div>
-              </div>
-
-              {/* Clean Website Preview */}
-              <div className="bg-gradient-to-b from-dark-bg-tertiary to-dark-bg-primary rounded-lg p-8 min-h-[300px] flex flex-col items-center justify-center">
-                <div className="w-12 h-12 bg-primary-500/20 rounded-lg flex items-center justify-center mb-4">
-                  <Sparkles className="w-6 h-6 text-primary-400" />
-                </div>
-                <div className="text-white font-medium text-lg mb-2">Your Website</div>
-                <div className="text-dark-text-secondary text-sm text-center">
-                  Beautiful, fast, and professional
-                </div>
-              </div>
+            <div className="text-center">
+              <motion.div 
+                className="text-3xl font-bold text-white mb-2"
+                animate={{ scale: [1, 1.1, 1] }}
+                transition={{ duration: 2, repeat: Infinity, delay: 0 }}
+              >
+                10K+
+              </motion.div>
+              <div className="text-white/60 text-sm">Websites Launched</div>
+            </div>
+            <div className="text-center">
+              <motion.div 
+                className="text-3xl font-bold text-white mb-2"
+                animate={{ scale: [1, 1.1, 1] }}
+                transition={{ duration: 2, repeat: Infinity, delay: 0.5 }}
+              >
+                99.9%
+              </motion.div>
+              <div className="text-white/60 text-sm">Uptime</div>
+            </div>
+            <div className="text-center">
+              <motion.div 
+                className="text-3xl font-bold text-white mb-2"
+                animate={{ scale: [1, 1.1, 1] }}
+                transition={{ duration: 2, repeat: Infinity, delay: 1 }}
+              >
+                24/7
+              </motion.div>
+              <div className="text-white/60 text-sm">Support</div>
             </div>
           </motion.div>
         </div>
+      </motion.div>
+
+      {/* Spaceship-style Floating Elements */}
+      <div className="absolute inset-0 pointer-events-none overflow-hidden">
+        {[...Array(6)].map((_, i) => (
+          <motion.div
+            key={i}
+            className="absolute w-2 h-2 bg-white/40 rounded-full"
+            style={{
+              left: `${Math.random() * 100}%`,
+              top: `${Math.random() * 100}%`,
+            }}
+            animate={{
+              y: [0, -100, 0],
+              opacity: [0, 1, 0],
+            }}
+            transition={{
+              duration: 3 + Math.random() * 2,
+              repeat: Infinity,
+              delay: Math.random() * 2,
+              ease: 'easeInOut'
+            }}
+          />
+        ))}
       </div>
     </section>
   )
