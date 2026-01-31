@@ -47,11 +47,11 @@ export default function Navigation() {
               <motion.div
                 animate={{ rotate: [0, 360] }}
                 transition={{ duration: 20, repeat: Infinity, ease: 'linear' }}
-                className="w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center"
+                className="w-8 h-8 bg-gradient-to-r from-emerald-500 to-blue-600 rounded-lg flex items-center justify-center"
               >
                 <Rocket className="w-5 h-5 text-white" />
               </motion.div>
-              <span className="text-2xl font-bold bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent">
+              <span className="text-2xl font-bold bg-gradient-to-r from-emerald-400 via-blue-400 to-teal-400 bg-clip-text text-transparent">
                 Websevix
               </span>
             </Link>
@@ -72,7 +72,7 @@ export default function Navigation() {
                   className="relative text-sm font-medium text-white/80 hover:text-white transition-colors duration-200 group"
                 >
                   {item.name}
-                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-400 to-purple-400 group-hover:w-full transition-all duration-300" />
+                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-emerald-400 to-blue-400 group-hover:w-full transition-all duration-300" />
                 </Link>
               </motion.div>
             ))}
@@ -86,9 +86,9 @@ export default function Navigation() {
             >
               <Link
                 href="#contact"
-                className="group px-6 py-3 text-sm font-semibold text-white bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl hover:from-blue-700 hover:to-purple-700 transition-all duration-300 flex items-center gap-2 shadow-lg hover:shadow-xl"
+                className="group px-6 py-3 text-sm font-semibold text-white bg-gradient-to-r from-emerald-600 to-blue-600 rounded-xl hover:from-emerald-700 hover:to-blue-700 transition-all duration-300 flex items-center gap-2 shadow-lg hover:shadow-xl"
               >
-                Launch Website
+                Get Website
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </Link>
             </motion.div>
@@ -144,7 +144,7 @@ export default function Navigation() {
                   className="block py-3 text-center text-base font-semibold text-white bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl"
                   onClick={() => setMobileMenuOpen(false)}
                 >
-                  Launch Website
+                  Get Website
                 </Link>
               </motion.div>
             </div>

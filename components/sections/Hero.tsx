@@ -17,8 +17,8 @@ export default function Hero() {
 
   return (
     <section ref={containerRef} className="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
-      {/* Spaceship-style Animated Background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900">
+      {/* Professional Websevix Background */}
+      <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-emerald-900 to-blue-900">
         {/* Animated Grid */}
         <motion.div 
           className="absolute inset-0 opacity-20"
@@ -35,9 +35,9 @@ export default function Hero() {
           }}
         />
         
-        {/* Floating Orbs - Spaceship Style */}
+        {/* Professional Floating Orbs */}
         <motion.div
-          className="absolute top-20 left-20 w-64 h-64 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-full blur-3xl"
+          className="absolute top-20 left-20 w-64 h-64 bg-gradient-to-r from-emerald-500/20 to-blue-500/20 rounded-full blur-3xl"
           animate={{ 
             scale: [1, 1.2, 1],
             x: [0, 50, 0],
@@ -46,7 +46,7 @@ export default function Hero() {
           transition={{ duration: 15, repeat: Infinity, ease: 'easeInOut' }}
         />
         <motion.div
-          className="absolute bottom-32 right-20 w-48 h-48 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-full blur-3xl"
+          className="absolute bottom-32 right-20 w-48 h-48 bg-gradient-to-r from-blue-500/20 to-teal-500/20 rounded-full blur-3xl"
           animate={{ 
             scale: [1, 1.3, 1],
             x: [0, -40, 0],
@@ -55,7 +55,7 @@ export default function Hero() {
           transition={{ duration: 12, repeat: Infinity, ease: 'easeInOut', delay: 3 }}
         />
         <motion.div
-          className="absolute top-1/2 left-1/2 w-32 h-32 bg-gradient-to-r from-indigo-500/20 to-pink-500/20 rounded-full blur-2xl"
+          className="absolute top-1/2 left-1/2 w-32 h-32 bg-gradient-to-r from-emerald-500/20 to-cyan-500/20 rounded-full blur-2xl"
           animate={{ 
             scale: [1, 1.4, 1],
             rotate: [0, 360],
@@ -81,16 +81,16 @@ export default function Hero() {
             Launch your digital presence
           </motion.div>
 
-          {/* Main Heading - Spaceship Style */}
+          {/* Original Websevix Heading */}
           <motion.h1 
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-6xl sm:text-7xl lg:text-8xl font-bold text-white mb-6 leading-tight"
           >
-            <span className="block">A website</span>
+            <span className="block">Your Dream</span>
             <motion.span 
-              className="block bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent"
+              className="block bg-gradient-to-r from-emerald-400 via-blue-400 to-purple-400 bg-clip-text text-transparent"
               animate={{ 
                 backgroundPosition: ['0% 50%', '100% 50%', '0% 50%'],
               }}
@@ -99,18 +99,18 @@ export default function Hero() {
                 backgroundSize: '200% 200%'
               }}
             >
-              odyssey
+              Website Reality
             </motion.span>
           </motion.h1>
 
-          {/* Spaceship-style Subtitle */}
+          {/* Original Websevix Subtitle */}
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
             className="text-xl sm:text-2xl text-white/80 mb-12 max-w-3xl mx-auto leading-relaxed font-light"
           >
-            Get next-level website creation through high-performance tools and AI for complete digital control.
+            We transform your business ideas into stunning, professional websites. Fast delivery, AI-powered design, and complete digital solutions.
           </motion.p>
 
           {/* Spaceship-style CTAs */}
@@ -126,9 +126,9 @@ export default function Hero() {
             >
               <Link
                 href="#contact"
-                className="group px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-xl hover:from-blue-700 hover:to-purple-700 transition-all duration-300 flex items-center gap-2"
+                className="group px-8 py-4 bg-gradient-to-r from-emerald-600 to-blue-600 text-white font-semibold rounded-xl hover:from-emerald-700 hover:to-blue-700 transition-all duration-300 flex items-center gap-2 shadow-lg shadow-emerald-500/25"
               >
-                Launch Website
+                Get Your Website
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Link>
             </motion.div>
@@ -138,9 +138,9 @@ export default function Hero() {
             >
               <Link
                 href="#pricing"
-                className="px-8 py-4 bg-white/10 backdrop-blur-sm border border-white/20 text-white font-semibold rounded-xl hover:bg-white/20 transition-all duration-300"
+                className="px-8 py-4 bg-white/10 backdrop-blur-sm border border-emerald-400/30 text-white font-semibold rounded-xl hover:bg-emerald-500/10 hover:border-emerald-400/50 transition-all duration-300"
               >
-                Explore Plans
+                View Pricing
               </Link>
             </motion.div>
           </motion.div>
